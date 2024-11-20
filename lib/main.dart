@@ -85,19 +85,55 @@ class MyHomePage extends StatelessWidget {
             const SizedBox(height: 20),
             const ListTile(
               leading: Icon(Icons.map),
-              title: Text('Map'),
+              title: Text(
+                'Poppins 300',
+                style: TextStyle(
+                  fontFamily: 'Poppins-Light',
+                  fontWeight: FontWeight.w300,
+                ),
+              ),
             ),
             const ListTile(
               leading: Icon(Icons.photo_album),
-              title: Text('Album'),
+              title: Text(
+                'Poppins 400',
+                style: TextStyle(
+                  fontFamily: 'Poppins-Regular',
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
             ),
             const ListTile(
               leading: Icon(Icons.phone),
-              title: Text('Phone'),
+              title: Text(
+                'Poppins 500',
+                style: TextStyle(
+                  fontFamily: 'Poppins-Medium',
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ),
             const ListTile(
               leading: Icon(Icons.settings),
-              title: Text('Settings'),
+              title: Text(
+                'Poppins 700',
+                style: TextStyle(
+                  fontFamily: 'Poppins-Bold',
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: CircleAvatar(
+                child: Text('A'),
+              ),
+              title: Text(
+                'Arial',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
             ),
             const SizedBox(height: 20),
             SizedBox(
