@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My First Flutter App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'Poppins', // Our downloaded font family
+        primarySwatch: Colors.green,
+        fontFamily: 'Poppins',
       ),
       home: const MyHomePage(),
     );
@@ -28,9 +28,9 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Basic Flutter App',
+          "Jay's Basic Flutter App",
           style: TextStyle(
-            fontFamily: 'RobotoSlab',
+            fontFamily: 'Poppins',
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -63,11 +63,62 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Image.asset('images/image1.jpg'),
+            SizedBox(
+              height: 200,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  Image(
+                    image: NetworkImage('https://picsum.photos/800/600'),
+                  ),
+                  SizedBox(width: 20),
+                  Image(
+                    image: NetworkImage('https://picsum.photos/800/600'),
+                  ),
+                  SizedBox(width: 20),
+                  Image(
+                    image: NetworkImage('https://picsum.photos/800/600'),
+                  ),
+                ],
+              ),
+            ),
             const SizedBox(height: 20),
-            Image.asset('images/image2.jpg'),
+            const ListTile(
+              leading: Icon(Icons.map),
+              title: Text('Map'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.photo_album),
+              title: Text('Album'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.phone),
+              title: Text('Phone'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
             const SizedBox(height: 20),
-            Image.asset('images/image3.jpg'),
+            SizedBox(
+              height: 200,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  Image(
+                    image: AssetImage('assets/images/david.jpg'),
+                  ),
+                  SizedBox(width: 20),
+                  Image(
+                    image: AssetImage('assets/images/japan-tumblr.jpg'),
+                  ),
+                  SizedBox(width: 20),
+                  Image(
+                    image: AssetImage('assets/images/mexico-sunset.jpg'),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
